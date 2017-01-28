@@ -1,14 +1,14 @@
+#! /usr/bin/python3
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 import response
 
 ret = ""
 
-
 class ServerHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
-        global ret
+        global ret # pylint: disable=W0603
         # Send response status code
         self.send_response(200)
 
@@ -26,7 +26,7 @@ class ServerHandler(BaseHTTPRequestHandler):
 
 
 def run():
-    global ret
+    global ret # pylint: disable=W0603
     print('starting server...')
 
     ret = response.get_json()
