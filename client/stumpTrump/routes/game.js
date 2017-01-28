@@ -18,8 +18,6 @@ function tweet2Clicked() {
 /* GET game page. */
 router.get('/', function(req, res, next) {
     var gameArray = [];
-    document.getElementById("tweet1").addEventListener("click", tweet1Clicked);
-    document.getElementById("tweet2").addEventListener("click", tweet2Clicked);
     request("http://localhost:3001", function(err, res, body) {
         gameArray = body;
     });
@@ -32,7 +30,10 @@ router.get('/', function(req, res, next) {
         if (gameArray[i][answer].real) startTime-=1000;
     }
     var score = (new Date()).getMilliseconds() - startTime; // Lower is better
-    // TODO: post to localhost:3000/end with score in body
+    request.post({
+        url: "http://localhost:3000/end",
+        body: "score=" + score
+    }, function(err, res, body) {});
 });
 
 module.exports = router;
