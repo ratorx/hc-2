@@ -2,8 +2,6 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 
 import response
 
-# HTTPRequestHandler class
-
 ret = ""
 
 
@@ -15,7 +13,8 @@ class ServerHandler(BaseHTTPRequestHandler):
         self.send_response(200)
 
         # Send headers
-        self.send_header('Content-type', 'text/html')
+        self.send_header('Content-type', 'application/json')
+        self.send_header('Connection', 'close')
         self.end_headers()
 
         # Write content as utf-8 data
