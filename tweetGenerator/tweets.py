@@ -3,13 +3,15 @@ import random
 import markovify
 import processing
 
+TEXT = ""
 LINES = []
 try:
-    LINES = open("trump.txt", encoding="utf8").readlines()
+    TEXT = open("trump.txt", encoding="utf8").read()
+    LINES = TEXT.split("\n")
 except FileNotFoundError:
     raise SystemExit
 
-MODEL = markovify.NewlineText("\n".join(LINES))
+MODEL = markovify.NewlineText(TEXT)
 
 def get_fake_tweet():
     fake = processing.post(MODEL.make_short_sentence(140,
