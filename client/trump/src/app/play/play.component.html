@@ -1,9 +1,11 @@
 <div class="play">
-  <button (click)="play()">Play</button>
   <div class="tweet" id="tweet1" *ngIf="currentTweet">
-    <button (click)="answer(first)" >{{currentTweet[first]}}</button>
+    <p>{{currentTweet[first]}}</p>
+    <button (click)="answer(first)" >First</button>
   </div>
   <div class="tweet" id="tweet2" *ngIf="currentTweet">
-    <button (click)="answer(!first)">{{currentTweet[!first]}}</button>
+    <p>{{currentTweet[!first]}}</p>
+    <button (click)="answer(!first)">Second</button>
   </div>
 </div>
+<button id="play" (click)="play()">Play</button>
