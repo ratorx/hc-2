@@ -1,0 +1,11 @@
+<div class="play">
+  <div class="tweet" id="tweet1" *ngIf="currentTweet">
+    <p>{{currentTweet[first]}}</p>
+    <button (click)="answer(first)" >First</button>
+  </div>
+  <div class="tweet" id="tweet2" *ngIf="currentTweet">
+    <p>{{currentTweet[!first]}}</p>
+    <button (click)="answer(!first)">Second</button>
+  </div>
+</div>
+<button id="play" (click)="play()">Play</button>
