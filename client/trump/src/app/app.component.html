@@ -1,3 +1,18 @@
-<h1>
-  {{title}}
-</h1>
+<div class="navigation">
+  <h3 id="title">StumpTrump</h3>
+  <nav class="nav">
+    <ul>
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/play">Play</a></li>
+      <li><a routerLink="/about">About</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="wrapper">
+  <router-outlet></router-outlet>
+</div>
+
+<div class="footer">
+  <p>Copyright &copy; Reeto Chatterjee, Adam Smith, Tudor Paraschivescu & Kuba Perlin 2017</p>
+</div>

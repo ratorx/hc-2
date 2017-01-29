@@ -1,1 +1,96 @@
-/* You can add global styles to this file, and also import other style files */
+body, html {
+  font-family: 'Lato', sans-serif;
+  background-color: #EBEDF3;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.navigation {
+  position: absolute;
+  opacity: 0.7;
+  top: -70px;
+  margin-top: 70px;
+  left: 0;
+  width: 100%;
+  display: inline-block;
+}
+
+.footer {
+  border-bottom: 1px solid #ccc;
+
+}
+
+.navigation h3 {
+  padding: 7px 0;
+  display: block;
+  line-height: 1.5em;
+  position: absolute;
+  margin-left: 35px;
+}
+
+.welcome, .about, .play, .end {
+  display: block;
+  padding-top: 25%;
+  text-align: center;
+  border-bottom: none;
+  background-color: #EBEDF3;
+}
+
+.navigation {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ccc;
+}
+
+div {
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+
+#title {
+  color: #55565B;
+}
+
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
+a, p, h3 {
+  color: #8091A5;
+}
+
+a:hover {
+  color: #55565B;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  opacity: 1;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  background-color: #efefef;
+  text-align: center;
+  font-size: 0.7em;
+}
