@@ -1,0 +1,12 @@
+<div class="wrapper" *ngIf="!finished">
+  <button (click)="play()">Play</button>
+  <div class="tweet" id="tweet1" *ngIf="currentTweet">
+    <button (click)="answer(false)" >{{currentTweet.false}}</button>
+  </div>
+  <div class="tweet" id="tweet2" *ngIf="currentTweet">
+    <button (click)="answer(true)">{{currentTweet.true}}</button>
+  </div>
+</div>
+<div *ngIf="finished">
+  <button (click)="moveOn()">Carry on</button>
+</div>
